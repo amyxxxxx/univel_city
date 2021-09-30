@@ -8,8 +8,8 @@ elif [A-Z] not in pass_word:
     print("Please enter a valid password")
 elif [0-9] not in pass_word:
     print("Please enter a valid password")
-# elif [$ # or @] not in pass_word:
-#     print("Please enter a valid password")
+elif [$#@] not in pass_word:
+    print("Please enter a valid password")
 elif len(pass_word) < 6:
     print("Please enter a valid password")
 elif len(pass_word) > 16:
@@ -56,4 +56,6 @@ elif side1 == side2 or side1 == side3 or side2 == side3:
 else:
     print('This is a scalene triangle')
 
-Original list of dictionaries: [{'make': 'Nokia', 'model': 216, 'color': 'Black'}, {'make': 'Mi Max', 'model': '2', 'color': 'Gold'}, {'make': 'Samsung', 'model': 7, 'color': 'Blue'}]
+original_list_of_dictionaries = [{'make': 'Nokia', 'model': 216, 'color': 'Black'}, {'make': 'Mi Max', 'model': '2', 'color': 'Gold'}, {'make': 'Samsung', 'model': 7, 'color': 'Blue'}]
+sort_list = sorted(original_list_of_dictionaries, key = lambda x:x['color'])
+print(sort_list)
